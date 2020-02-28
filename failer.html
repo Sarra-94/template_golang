@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Template Email Demo</title>
+</head>
+<body>
+<h1 style="  text-align: center; color: red">Failer Students</h1>
+{{range .}}
+    <div style="display: flex; flex-direction: column">
+        {{ if lt .Note 10}} <h1> Name: {{  .Name  }} : "You  Fail sorry"</h1> {{end}}
+    </div>
+{{end}}
+<button><a href="/">Back to home</a></button>
+</body>
+</html>

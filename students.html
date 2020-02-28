@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Template Student</title>
+    ​
+</head>
+<body>
+<h1 style="color: blue">Students Card</h1>
+<div  style="display: flex ; justify-content: space-around  ">
+    ​
+    {{range .}}
+        <div style="border:2px solid black; padding: 2%">
+            <h2>Name: {{.Name}}</h2>
+            <h2>LastName : {{.LastName}}</h2>
+            <h2>Email : {{.Email}}</h2>
+            <h2> {{if  ge .Note 10}}
+            <h3>"your Note is {{.Note}}  "you succeed"</h3>{{else}} <h2>"you are a looser"</h2></h2> {{end}}
+            ​
+        </div>
+    {{end}}
+</div>
+<div style="display: flex; justify-content: space-around">
+    <div>
+        <h4>Student that succeed</h4>
+        ​
+        <a href="/succeess">See Students</a>
+    </div>
+    <div>
+        <h4>Student that Failed</h4>​
+        <a href="/failer">See Students</a>
+    </div>
+</div>
+</body>
